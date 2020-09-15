@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Form Bootstrap</title>
+</head>
+
+<body>
+
+    <div class="container" style="border: 2px solid red;">
+        <h2 class="py-3 text-center">Bootstrap 4 form classes</h2>
+        <div class="row py-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" value="abc@gmail.com" class="form-control-plaintext" readonly>
+                    <!--you can remove plaintext and can only use form-control-->
+
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control">
+                    <smnall class="form-text text-muted">
+                        Your password must be 8-20 characters long
+                    </smnall>
+                </div>
+                <div class="form-group">
+                    <label for="">Countries</label>
+                    <select name="" id="" class="form-control">
+                        <option value="">India</option>
+                        <option value="">U.S.A</option>
+                        <option value="">Norway</option>
+                        <option value="">Africa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Message</label>
+                    <Textarea class="form-control"></Textarea>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">File Upload</label>
+                    <input type="file" class="form-control-file">
+                    <!--file Upload-->
+                </div>
+                <div class="form-group">
+                    <label for="">Price range</label>
+                    <input type="range" class="form-control-range" id="myslider" min="1" max="100" value="50"
+                        oninput="ret()">
+                    <!--Range-->
+                    <p> value:<span id="demo"></span></p>
+                </div>
+                <div class="form-group">
+                    <label for="">Hobbies</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="musicCheck">
+                        <!--Checkbox-->
+                        <label for="musicCheck" class="form-check-label">Music</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="sportCheck">
+                        <!--Checkbox-->
+                        <label for="sportCheck" class="form-check-label">Sports</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="bookCheck" disabled>
+                        <!--Checkbox-->
+                        <!--Disbaled-->
+                        <label for="bookCheck" class="form-check-label">Books</label>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Gender</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="MaleCheck" name="gender">
+                        <!--Radio Button-->
+                        <label for="MaleCheck" class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="FemaleCheck" name="gender">
+                        <!--Radio Button-->
+                        <label for="FemaleCheck" class="form-check-label">Female</label>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        var slider = document.getElementById("myslider");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;  //here now it get only middle slider value i.e 50
+        function ret() {
+            output.innerHTML = slider.value; //but here value change when we move slider and the value assign to  output
+        }
+
+
+    </script>
+</body>
+
+</html>
